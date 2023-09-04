@@ -53,6 +53,7 @@ export const IconButton = styled.button`
   justify-content: center;
   align-items: center;
   padding: 8px;
+  border-radius: 6px;
   background-color: ${({ theme }) => theme['purple-800']};
   color: ${({ theme }) => theme.white};
 
