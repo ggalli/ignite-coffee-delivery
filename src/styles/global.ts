@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Baloo 2', sans-serif;
     font-weight: 800;
     line-height: 130%;
+    color: ${(props) => props.theme['base-800']}; 
   }
 
   h1 { 
