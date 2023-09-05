@@ -1,5 +1,5 @@
-import { Layout } from '@components'
-import { Benefits, Hero } from './styles'
+import { CoffeeCard, Layout } from '@components'
+import { Benefits, CoffeesContainer, Hero } from './styles'
 import heroImg from '../../assets/images/hero.png'
 import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
@@ -54,6 +54,14 @@ export function Home() {
           />
         </div>
       </Hero>
+
+      <section>
+        <h2>Nossos cafés</h2>
+
+        <CoffeesContainer>
+          <CoffeeCard />
+        </CoffeesContainer>
+      </section>
     </Layout>
   )
 }

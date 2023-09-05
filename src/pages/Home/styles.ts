@@ -35,3 +35,10 @@ export const Benefits = styled.div`
     }
   }
 `
+
+export const CoffeesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  margin-top: 56px;
+`
