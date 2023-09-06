@@ -3,6 +3,7 @@ import { Benefits, CoffeesContainer, Hero } from './styles'
 import heroImg from '../../assets/images/hero.png'
 import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
+import { coffees } from '../../lib/coffee'
 
 export function Home() {
   const theme = useTheme()
@@ -59,7 +60,9 @@ export function Home() {
         <h2>Nossos cafés</h2>
 
         <CoffeesContainer>
-          <CoffeeCard />
+          {coffees.map((coffee) => (
+            <CoffeeCard key={coffee.id} coffee={coffee} />
+          ))}
         </CoffeesContainer>
       </section>
     </Layout>
