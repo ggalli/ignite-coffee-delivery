@@ -5,7 +5,7 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 256px;
-  padding: 24px;
+  padding: 20px;
   padding-top: 0;
   border-radius: 6px 36px;
   background: ${(props) => props.theme['base-100']};
@@ -24,6 +24,10 @@ export const CardWrapper = styled.div`
   }
 
   & .tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
     margin-bottom: 16px;
   }
 `
@@ -40,7 +44,10 @@ export const Tag = styled.span`
 export const Buy = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  flex-grow: 1;
+  gap: 20px;
+  margin-top: 32px;
 
   & .price {
     display: flex;

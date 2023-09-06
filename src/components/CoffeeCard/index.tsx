@@ -1,27 +1,40 @@
 import { Buy, CardWrapper, Tag } from './styles'
-import coffeeImg from '../../assets/images/Expresso.png'
+import { Counter, IconButton } from '@components'
+import { ShoppingCartSimple } from '@phosphor-icons/react'
+import { Coffee } from '../../@types/coffee'
 
-export function CoffeeCard() {
+interface CoffeeCardProps {
+  coffee: Coffee
+}
+
+export function CoffeeCard({ coffee }: CoffeeCardProps) {
+  const { description, image, name, price, tags } = coffee
   return (
     <CardWrapper>
-      <img src={coffeeImg} alt="" />
+      <img src={image} alt={`Imagem ${name}`} />
 
       <div className="tags">
-        <Tag>Tradicional</Tag>
+        {tags.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
       </div>
 
-      <h4>Expresso Tradicional</h4>
-      <p className="text-sm">
-        O tradicional café feito com água quente e grãos moídos
-      </p>
+      <h4>{name}</h4>
+      <p className="text-sm">{description}</p>
 
       <Buy>
         <div className="price">
           <span className="text-sm">R$</span>
-          <h3>9,90</h3>
+          <h3>{price}</h3>
         </div>
 
-        <div className="actions"></div>
+        <div className="actions">
+          <Counter />
+
+          <IconButton>
+            <ShoppingCartSimple size={22} weight="fill" />
+          </IconButton>
+        </div>
       </Buy>
     </CardWrapper>
   )
