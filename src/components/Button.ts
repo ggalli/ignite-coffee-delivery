@@ -56,6 +56,7 @@ export const IconButton = styled.button`
   border-radius: 6px;
   background-color: ${({ theme }) => theme['purple-800']};
   color: ${({ theme }) => theme.white};
+  cursor: pointer;
 
   &:hover {
     background-color: ${({ theme }) => theme['purple-500']};
