@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const Hero = styled.section`
   display: flex;
-  gap: 32px;
+  gap: 56px;
 
   & > .left {
   }

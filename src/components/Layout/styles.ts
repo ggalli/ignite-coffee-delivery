@@ -2,7 +2,7 @@ import { IconButton } from '@components'
 import { styled } from 'styled-components'
 
 export const Container = styled.div`
-  max-width: 1120px;
+  max-width: calc(1120px + 48px);
   margin: auto;
   padding: 0 24px;
 `
