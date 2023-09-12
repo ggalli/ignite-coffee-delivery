@@ -50,6 +50,8 @@ export const GlobalStyle = createGlobalStyle`
   .text-sm { font-size: 0.875rem }
   .text-xs { font-size: 0.75rem }
 
+  .text-bold { font-weight: 700 }
+
   .img-fluid {
     width: 100%;
     height: auto;
