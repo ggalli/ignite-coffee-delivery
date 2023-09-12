@@ -12,7 +12,9 @@ export const CounterWrapper = styled.div`
 
 export const CounterButton = styled.button`
   all: unset;
-  height: 38px;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
   padding: 0 8px;
   color: ${(props) => props.theme['purple-500']};
   cursor: pointer;
