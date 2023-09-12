@@ -1,4 +1,12 @@
-import { Input, Layout, Select } from '@components'
+import {
+  Button,
+  Card,
+  CartItem,
+  Divider,
+  Input,
+  Layout,
+  Select,
+} from '@components'
 import {
   CardHeader,
   CheckoutContainer,
@@ -6,6 +14,7 @@ import {
   Flex,
   OrderData,
   Payment,
+  ShoppingCart,
 } from './styles'
 import {
   Bank,
@@ -79,6 +88,38 @@ export function Checkout() {
             </div>
           </Payment>
         </OrderData>
+
+        <ShoppingCart>
+          <h5>Cafés selecionados</h5>
+
+          <Card>
+            <CartItem />
+            <Divider />
+            <CartItem />
+            <Divider />
+
+            <div className="info">
+              <div>
+                <p className="text-sm">Total de itens</p>
+                <p>R$ 29,70</p>
+              </div>
+
+              <div>
+                <p className="text-sm">Entrega</p>
+                <p>R$ 3,50</p>
+              </div>
+
+              <div className="text-lg text-bold">
+                <p>Total</p>
+                <p>R$ 3,50</p>
+              </div>
+            </div>
+
+            <Button variant="primary" stretch>
+              confirmar pedido
+            </Button>
+          </Card>
+        </ShoppingCart>
       </CheckoutContainer>
     </Layout>
   )

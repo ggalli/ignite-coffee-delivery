@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { Card } from '@components'
 
 export const CheckoutContainer = styled.div`
   display: flex;
@@ -9,7 +10,24 @@ export const OrderData = styled.div`
   width: 60%;
 `
 
-export const ShoppingCart = styled.div``
+export const ShoppingCart = styled.div`
+  ${Card} {
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  & .info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: stretch;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+`
 
 export const DeliveryAddress = styled.div`
   padding: 40px;
