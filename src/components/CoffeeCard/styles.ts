@@ -57,7 +57,7 @@ export const Buy = styled.div`
 
   & .actions {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 8px;
   }
 `
